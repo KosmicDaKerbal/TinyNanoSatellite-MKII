@@ -1,3 +1,5 @@
+#include <DFRobot_DHT11.h>
+DFRobot_DHT11 DHT;
 const byte Sensor = 0;
 const byte tx1 = 1;
 const byte tx2 = 2;
@@ -12,17 +14,6 @@ boolean b6;
 boolean b7;
 boolean b8;
 byte count;
-void preamble () {
-  digitalWrite (tx1, HIGH);
-  digitalWrite (tx2, HIGH);
-  digitalWrite (shift, HIGH);
-  digitalWrite (load, HIGH);
-  delay (500);
-  digitalWrite (tx1, LOW);
-  digitalWrite (tx2, LOW);
-  digitalWrite (shift, LOW);
-  digitalWrite (load, LOW);
-}
 void transmit (byte value) {
   byte bytePointer = 0;
   for (byte bin = 128; bin >= 1; bin = bin / 2) {
@@ -68,7 +59,6 @@ void transmit (byte value) {
     }
     bytePointer++;
   }
-  digitalWrite (load, HIGH);
   if (b1 == true) {
     digitalWrite (tx1, HIGH);
   } else {
@@ -126,6 +116,8 @@ void transmit (byte value) {
   digitalWrite (tx1, LOW);
   digitalWrite (tx2, LOW);
   digitalWrite (shift, LOW);
+  digitalWrite (load, HIGH);
+  delay (85);
   digitalWrite (load, LOW);
   delay (100);
 }
