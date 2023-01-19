@@ -29,4 +29,4 @@ Arduino Pins:
 * Digital Pins 1-8 - Input Bits
 * Digital Pin 9 - Load Input
 * Digital Pin 10 - Chip Select for SD Card
-* I2C - Pins A4 (SDA) and A5 (SCL) for Atmega328p and Pins 20 (SDA) and 21 (SCL) for Atmegs 1280 / 2560.
+* I2C - Pins A4 (SDA) and A5 (SCL) for Atmega328p and Pins 20 (SDA) and 21 (SCL) for Atmega 1280 / 2560.
