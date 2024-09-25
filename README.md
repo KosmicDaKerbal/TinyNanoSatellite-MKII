@@ -3,6 +3,7 @@
 Second Prototype of the TinyNanoSatellite, a cheap nanosatellite based on the Atmel ATTiny13 Microcontroller.
 
 Parts Used:
+
 * Atmel ATTiny13A Microcontroller Clocked at 600KHz
 * DHT11 Temperature and Humidity Sensor
 * HT12E Radio Encoder
@@ -20,12 +21,14 @@ ATtiny13 Pins:
 Receiver:
 
 Use any Microcontroller with Chip ATmega328p and Above.
+
 * Receiver uses all three communication modes i.e. UART, SPI and I2C, so make sure you use the proper pins for that.
 * Use an I2C LCD instead of regular LCD.
 * Make sure Microcontroller has support for EEPROM.
 * Requires SPI SD Card for Data Logging.
 
 Arduino Pins:
+
 * Digital Pins 1-8 - Input Bits
 * Digital Pin 9 - Load Input
 * Digital Pin 10 - Chip Select for SD Card
