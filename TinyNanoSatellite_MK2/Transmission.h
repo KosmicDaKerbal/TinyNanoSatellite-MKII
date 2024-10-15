@@ -13,7 +13,7 @@ void readDHT () {
   H = DHT.humidity;
 }
 boolean bin (byte num, byte pv){
-  if (num - pv > 0) return 0;
+  if (num - pv < 0) return 0;
   mod = num - pv;
   return 1;
 }
